@@ -1,0 +1,19 @@
+{
+  parser: "babel-eslint",
+  extends: "airbnb",
+  plugins: [
+    "react"
+  ],
+  env: {
+    browser: true,
+    mocha: true,
+    node: true
+  },
+  rules: {
+    consistent-return: "off",
+    linebreak-style: "off",
+    no-bitwise: "off",
+    react/forbid-prop-types: "off",
+    react/require-default-props: "off"
+  },
+}
