@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import PdfPage from './PdfPage';
+
 require('pdfjs-dist/build/pdf.combined');
 require('pdfjs-dist/web/compatibility');
 
@@ -207,62 +209,25 @@ class Pdf extends Component {
   }
 
   render() {
-
     if (this.state.pdf) {
-
       return (
         <div>
-          {[...Array(this.state.pdf.numPages)].map((_, page) => {
-
-            return <PdfPage key={page} pdf={this.state.pdf} page={page+1} scale={this.props.scale} className={this.props.className} />
-
-          })}
+          {[...Array(this.state.pdf.numPages)].map((_, page) =>
+            <PdfPage
+              key={page}
+              pdf={this.state.pdf}
+              page={page + 1}
+              scale={this.props.scale}
+              className={this.props.className}
+            />,
+          )}
         </div>
-      )
-
-    } else {
-
-      return <div>Loading PDF...</div>;
-
+      );
     }
 
+    return <div>Loading PDF...</div>;
   }
 }
-
-class PdfPage extends Component {
-
-  componentDidMount() {
-
-    this.props.pdf.getPage(this.props.page).then(this.renderPage);
-
-  }
-
-  renderPage = (pdfPage) => {
-
-    if (pdfPage) {
-
-      const { canvas } = this.refs;
-      const canvasContext = canvas.getContext('2d');
-      const { scale, rotate } = this.props;
-      const viewport = pdfPage.getViewport(scale, rotate);
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-      pdfPage.render({ canvasContext, viewport });
-
-    }
-
-  }
-
-  render() {
-
-    return (
-      <canvas ref='canvas' className={this.props.className} />
-    )
-
-  }
-
-}
-
 
 Pdf.displayName = 'react-pdf-js-infinite';
 
