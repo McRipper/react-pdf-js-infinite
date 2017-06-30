@@ -15,9 +15,9 @@ config.plugins = [
 
 config.entry = './example/index.jsx';
 
-//config.output = {
-  //path: path.resolve(__dirname, 'dist'),
-  //filename: 'example.js'
-//}
+config.output = {
+  path: path.resolve(__dirname, 'dist'),
+  filename: 'example.js'
+}
 
 module.exports = config;
