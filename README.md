@@ -14,7 +14,7 @@ Use in your app
 
 ```js
 import React from 'react';
-import PDF from 'react-pdf-js';
+import PDF from 'react-pdf-js-infinite';
 
 export default class MyPdfViewer extends React.Component {
 
