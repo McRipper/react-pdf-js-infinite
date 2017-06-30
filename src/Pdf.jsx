@@ -28,10 +28,6 @@ const makeCancelable = (promise) => {
 
 class Pdf extends Component {
 
-  static defaultProps = {
-    scale: 1.0,
-  };
-
   static propTypes = {
     content: PropTypes.string,
     documentInitParameters: PropTypes.shape({
@@ -50,6 +46,10 @@ class Pdf extends Component {
     onDocumentComplete: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
+  };
+
+  static defaultProps = {
+    scale: 1.0,
   };
 
   static onDocumentError(err) {

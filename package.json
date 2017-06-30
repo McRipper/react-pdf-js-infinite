@@ -64,7 +64,7 @@
     "rimraf": "2.6.1",
     "webpack": "3.0.0"
   },
-  "npmName": "react-pdf-js",
+  "npmName": "react-pdf-js-infinite",
   "npmFileMap": [
     {
       "files": [
