@@ -1,5 +1,6 @@
 # react-pdf-js-infinite
 ---
+[![npm version](https://badge.fury.io/js/react-pdf-js-infinite.svg)](https://badge.fury.io/js/react-pdf-js-infinite)
 
 `react-pdf-js-infinite` provides a component for rendering PDF documents using [PDF.js](http://mozilla.github.io/pdf.js/). Written for React 15 and ES2015 using the Airbnb style guide.
 
