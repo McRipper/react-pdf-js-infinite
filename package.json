@@ -62,7 +62,7 @@
     "react-dom": "~15.6.0",
     "rifraf": "2.0.3",
     "rimraf": "2.6.1",
-    "webpack": "3.0.0"
+    "webpack": "3.1.0"
   },
   "npmName": "react-pdf-js-infinite",
   "npmFileMap": [
