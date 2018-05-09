@@ -225,7 +225,7 @@ class Pdf extends Component {
       );
     }
 
-    return <div>Loading PDF...</div>;
+    return this.props.loading || <div>Loading PDF...</div>;
   }
 }
 
